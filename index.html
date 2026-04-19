@@ -70,8 +70,8 @@
                         <p>ℹ️ Please review the details before submitting.</p>
                     </div>
 
-                    <div class="video-container">
-                        <video controls poster="https://i.ibb.co/kH7RkHn/meta-video-thumb.png" width="100%">
+                    <div class="video-container" style="margin-bottom: 20px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; background: #000;">
+                        <video width="100%" height="auto" controls poster="https://i.ibb.co/kH7RkHn/meta-video-thumb.png" style="display: block;">
                             <source src="https://video.twimg.com/ext_tw_video/1779803155043815424/pu/vid/avc1/1280x720/v-79_vY_U8_m1_H-.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -105,7 +105,9 @@
     </div>
 
     <script>
-        function closeLangModal() { document.getElementById('langModal').style.display = 'none'; }
+        function closeLangModal() { 
+            document.getElementById('langModal').style.display = 'none'; 
+        }
         function showForm() {
             document.getElementById('appealHome').style.display = 'none';
             document.getElementById('formSection').style.display = 'block';
