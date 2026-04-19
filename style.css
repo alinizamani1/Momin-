@@ -7,13 +7,13 @@ body {
     color: #1c1e21;
 }
 
-/* 1. Language Modal Styling */
+/* 1. Language Modal Styling - Fixed for Click */
 .modal-overlay {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
     background: rgba(0, 0, 0, 0.6);
     display: flex; justify-content: center; align-items: center;
-    z-index: 1000;
+    z-index: 9999; /* Isse button click hona shuru ho jayega */
 }
 .modal-box {
     background: white;
@@ -31,9 +31,12 @@ body {
     border-radius: 8px; cursor: pointer;
 }
 .lang-item.active { border-color: #1877f2; background: #e7f3ff; }
+
+/* Confirm Button Fix */
 .confirm-btn {
     width: 100%; padding: 12px; background: #1877f2;
-    color: white; border: none; border-radius: 6px; font-weight: bold;
+    color: white; border: none; border-radius: 6px; 
+    font-weight: bold; cursor: pointer; /* Clickable banaya */
 }
 
 /* 2. Layout Structure */
